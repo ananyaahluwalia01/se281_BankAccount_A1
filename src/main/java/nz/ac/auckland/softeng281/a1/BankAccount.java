@@ -11,6 +11,7 @@ public class BankAccount {
     // Declare class fields here
     private double initialBalance;
     private int transactionsLimit;
+    private int transactionsSoFar;
     
     /**
      * Construct a BackAccount instance with given initial balance and transactions limit
@@ -29,6 +30,7 @@ public class BankAccount {
     public BankAccount() {
     	this.initialBalance = 0.0;
       this.transactionsLimit = 10;
+      this.transactionsSoFar = 0;
     }
 
     /**
@@ -55,7 +57,14 @@ public class BankAccount {
      * @param amount
      */
     public void deposit(double amount) {
-        //TODO implement TASK 3
+        if (this.transactionsSoFar == this.transactionsLimit) {
+          System.out.println("transactions limit reached");
+          return;
+        } else {
+          this.initialBalance += amount; 
+          this.transactionsSoFar++;
+          return;
+        }
     }
 
     /**
@@ -64,7 +73,17 @@ public class BankAccount {
      * @param amount
      */
     public void withdraw(double amount) {
-        //TODO implement TASK 3
+        if (this.transactionsSoFar == this.transactionsLimit) {
+          System.out.println("transactions limit reached");
+          return;
+        } else if (this.initialBalance >= amount) {
+          this.initialBalance -= amount;
+          this.transactionsSoFar++;
+          return;
+        } else {
+          System.out.println("amount exceeded");
+          return;
+        }
     }
 
     /**
