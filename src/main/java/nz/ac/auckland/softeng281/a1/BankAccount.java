@@ -37,8 +37,7 @@ public class BankAccount {
      * @return
      */
     public double getBalance() {
-        //TODO implement TASK 2
-        return -1;
+        return initialBalance;
     }
 
     /**
@@ -47,8 +46,7 @@ public class BankAccount {
      * @return
      */
     public int getTransactionsLimit() {
-        //TODO implement TASK 2
-        return -1;
+        return transactionsLimit;
     }
     
     /**
