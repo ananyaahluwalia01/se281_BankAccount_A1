@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 	BankAccountTestSuite.Task1Test.class,
   BankAccountTestSuite.Task2Test.class,
   BankAccountTestSuite.Task3Test.class,
-    //BankAccountTestSuite.Task4Test.class,
+  BankAccountTestSuite.Task4Test.class,
     //BankAccountTestSuite.YourTests.class
 })
 

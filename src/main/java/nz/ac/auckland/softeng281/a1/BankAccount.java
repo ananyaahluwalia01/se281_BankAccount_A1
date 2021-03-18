@@ -93,7 +93,17 @@ public class BankAccount {
      * @param recipient
      */
     public void transferTo(double amount, BankAccount recipient) {
-        //TODO implement  TASK 4
+        if (this.transactionsSoFar == this.transactionsLimit || recipient.transactionsSoFar == recipient.transactionsLimit) {
+          System.out.println("transactions limit reached");
+          return;
+        } else if (this.initialBalance >= amount){
+          this.initialBalance -= amount;
+          recipient.initialBalance += amount;
+          return;
+        } else {
+          System.out.println("amount exceeded");
+          return;
+        }
     }
 
 }
