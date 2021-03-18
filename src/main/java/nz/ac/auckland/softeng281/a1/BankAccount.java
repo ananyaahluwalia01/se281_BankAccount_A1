@@ -8,8 +8,9 @@ package nz.ac.auckland.softeng281.a1;
  * Bank Account Class
  */
 public class BankAccount {
-    //TODO implement TASK 2
     // Declare class fields here
+    private double initialBalance;
+    private int transactionsLimit;
     
     /**
      * Construct a BackAccount instance with given initial balance and transactions limit
@@ -18,14 +19,16 @@ public class BankAccount {
      * @param transactionsLimit
      */
     public BankAccount(double initialBalance, int transactionsLimit) {
-    	//TODO implement TASK 2
+    	this.initialBalance = initialBalance;
+      this.transactionsLimit = transactionsLimit;
     }
 
     /**
      * Default constructor
      */
     public BankAccount() {
-    	//TODO implement TASK 2
+    	this.initialBalance = 0.0;
+      this.transactionsLimit = 10;
     }
 
     /**
